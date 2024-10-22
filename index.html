@@ -7,8 +7,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio Website</title>
+    <script>
+        window.onload = function() {
+            let currentImageIndex = 0;
+            const images = document.querySelectorAll('.home-img img');  // Select all the images inside the .home-img div
+            const totalImages = images.length;  // Get the total number of images
+    
+            function changeImage() {
+                // Hide the current image
+                images[currentImageIndex].style.display = 'none';
+    
+                // Move to the next image
+                currentImageIndex = (currentImageIndex + 1) % totalImages;
+    
+                // Show the next image
+                images[currentImageIndex].style.display = 'block';
+            }
+    
+            // Initialize by showing the first image
+            images[currentImageIndex].style.display = 'block';
+    
+            // Set the interval to change the image every 5 seconds (5000 ms)
+            setInterval(changeImage, 5000);
+        }
+    </script>
+    
 </head>
 <body>
+
     <header>
         <a href="#" class="logo">Abdulrahman Almyman</a>
 
@@ -25,8 +51,12 @@
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="main.jpg" alt="">
+            <img src="u1.jpg" alt="Photo 1">
+            <img src="u2.jpg" alt="Photo 2" style="display:none;">
+            <img src="u3.jpg" alt="Photo 3" style="display:none;">
+            <!-- Add as many photos as you want here -->
         </div>
+        
         <div class="home-content">
             <h1>Hi, I am <span>Abdulrahman</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
