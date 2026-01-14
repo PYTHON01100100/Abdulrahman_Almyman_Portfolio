@@ -1,52 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <title>Abdulrahman Almyman's Portfolio 👨🏻‍💻</title>
+    <title>Abdulrahman Almyman | Software Developer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abdulrahman Almyman - Software Developer, Machine Learning Engineer, and Cloud Computing enthusiast">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
-    <script>
-        window.onload = function() {
-            let currentImageIndex = 0;
-            const images = document.querySelectorAll('.home-img img');  // Select all the images inside the .home-img div
-            const totalImages = images.length;  // Get the total number of images
-    
-            function changeImage() {
-                // Hide the current image
-                images[currentImageIndex].style.display = 'none';
-    
-                // Move to the next image
-                currentImageIndex = (currentImageIndex + 1) % totalImages;
-    
-                // Show the next image
-                images[currentImageIndex].style.display = 'block';
-            }
-    
-            // Initialize by showing the first image
-            images[currentImageIndex].style.display = 'block';
-    
-            // Set the interval to change the image every 5 seconds (5000 ms)
-            setInterval(changeImage, 5500);
-        }
-    </script>
-    
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">Abdulrahman Almyman</a>
+        <a href="#home" class="logo">Abdulrahman Almyman</a>
 
         <nav>
-            <a href="#home" class="active"> Home</a>
-            <a href="#education" >Education</a>
-            <a href="#experience" >Experience</a>
-                <a href="#projects" >Projects</a>
-                <a href="#articles" >Articles</a>
-            <a href="#skills" >Skills</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#articles">Articles</a>
+            <a href="#skills">Skills</a>
         </nav>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 <section id="home" class="home">
     <div class="home-img">
@@ -91,11 +72,11 @@
 
         
         <div class="home-content">
-            <h1>Hi, I am <span>Abdulrahman</span></h1>
+            <h1>Hi, I'm <span>Abdulrahman</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
             <p>
-            I'm driven by curiosity & passionate about everything around Technology, Computers, & Artificial Intelligence Because of Video Games, & Using Computers. My gateway to that world started with Visual Basic when I was a student at school so I decided to build my career by studying computer science as a major at that time & studying & working for it & I continued on this journey in high school & University with Python, Mysql, Java, Machine Learning & Web Technologies.I'm driven by curiosity & passionate about everything around Technology, Computers, & Artificial Intelligence Because of Video Games, & Using Computers. My gateway to that world started with Visual Basic when I was a student at school so I decided to build my career by studying computer science as a major at that time & studying & working for it & I continued on this journey in high school & University with Python, Mysql, Java, Machine Learning & Web Technologies.
-</p>
+                Driven by curiosity and passionate about Technology, Computers, and Artificial Intelligence. My journey started with Visual Basic in school, leading me to pursue Computer Science. I've continued growing through Python, MySQL, Java, Machine Learning, and Web Technologies throughout high school and university.
+            </p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/abdulrahmanalmyman/"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/PYTHON01100100"><i class="fa-brands fa-github"></i></a>
@@ -104,7 +85,7 @@
                 <a href="https://drive.google.com/file/d/1K2lDxvyalavo-QJJIgDnzO189A0WtbJC/view?usp=sharing"><i class="fa-regular fa-file"></i></a>
                 
             </div>
-            <a href="#" class="btn">Contact me</a>
+            <a href="mailto: abdulrahmanalmyman@gmail.com " class="btn">Contact Me</a>
         </div>
     </section>
 
@@ -196,17 +177,135 @@
         <h2 class="skills-title">Technical Skills</h2>
 
         <div class="skills-grid">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Terraform(in progress)</div>
-            <div class="skill-card">Tensorflow(in progress)</div>
-            <div class="skill-card">vLLM(in progress)</div>
-            <div class="skill-card">Linux (I use Arch btw)</div>
-            <div class="skill-card">Cloud Computing & Architectures(in progress)</div>
-            <div class="skill-card">Cloud Security & Best Practices(in progress)</div>
-            <div class="skill-card">Hardware & Cloud Integrations (in progress)</div>
-            <div class="skill-card">Docker (in progress)</div>
-            <div class="skill-card">Kubernetes (in progress)</div>
+            <div class="skill-card"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill-card"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="skill-card"><i class="fa-brands fa-js"></i> JavaScript</div>
+            <div class="skill-card"><i class="fa-brands fa-html5"></i> HTML5</div>
+            <div class="skill-card"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+            <div class="skill-card"><i class="fa-solid fa-brain"></i> TensorFlow</div>
+            <div class="skill-card"><i class="fa-solid fa-robot"></i> Machine Learning</div>
+            <div class="skill-card"><i class="fa-solid fa-database"></i> MySQL</div>
+            <div class="skill-card"><i class="fa-brands fa-linux"></i> Linux (Arch)</div>
+            <div class="skill-card"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="skill-card"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</div>
+            <div class="skill-card"><i class="fa-brands fa-aws"></i> AWS</div>
+            <div class="skill-card"><i class="fa-brands fa-google"></i> Google Cloud</div>
+            <div class="skill-card"><i class="fa-solid fa-cloud"></i> Terraform</div>
+            <div class="skill-card"><i class="fa-solid fa-shield-halved"></i> Cloud Security</div>
+            <div class="skill-card"><i class="fa-brands fa-git-alt"></i> Git</div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-logo">Abdulrahman Almyman</h3>
+            <p class="footer-text">
+                Software Developer passionate about building innovative solutions with cutting-edge technologies.
+            </p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/abdulrahmanalmyman/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/PYTHON01100100" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/PYTHON01100100" target="_blank" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/@AbdulrahmanAlmyman" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">2025 <span>Abdulrahman Almyman</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Image slideshow
+        window.onload = function() {
+            let currentImageIndex = 0;
+            const images = document.querySelectorAll('.home-img img');
+            const totalImages = images.length;
+
+            function changeImage() {
+                images[currentImageIndex].style.display = 'none';
+                currentImageIndex = (currentImageIndex + 1) % totalImages;
+                images[currentImageIndex].style.display = 'block';
+            }
+
+            images[currentImageIndex].style.display = 'block';
+            setInterval(changeImage, 5500);
+
+            // Initialize fade-in animations
+            observeSections();
+        }
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide scroll button and header styling
+        window.addEventListener('scroll', () => {
+            const scrollBtn = document.querySelector('.scroll-top');
+            const header = document.querySelector('header');
+
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('visible');
+                header.classList.add('scrolled');
+            } else {
+                scrollBtn.classList.remove('visible');
+                header.classList.remove('scrolled');
+            }
+
+            // Update active nav link
+            updateActiveNav();
+        });
+
+        // Update active navigation link based on scroll position
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Intersection Observer for fade-in animations
+        function observeSections() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+    </script>
 </body>
 </html>
