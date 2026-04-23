@@ -440,10 +440,12 @@ span{
 
 .experience-photo,
 .education-photo{
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50%;
-    object-fit: cover;
+    max-width: 18rem;
+    max-height: 18rem;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    object-fit: contain;
     border: 3px solid rgba(183,75,75,0.4);
     box-shadow: 0 0 30px rgba(183,75,75,0.2);
     transition: 0.3s ease;
@@ -490,8 +492,10 @@ span{
 
     .education-photo,
     .experience-photo{
-        width: 15rem;
-        height: 15rem;
+        max-width: 15rem;
+        max-height: 15rem;
+        width: auto;
+        height: auto;
     }
 }
 
